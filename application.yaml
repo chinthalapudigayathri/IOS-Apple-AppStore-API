@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/IOS
+    username: postgres
+    password: $G@yathri06
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+apple:
+  appstore:
+    apiBase: https://api.appstoreconnect.apple.com/v1
+    issuerId: YOUR_ISSUER_ID
+    keyId: YOUR_KEY_ID
+    privateKeyPath: classpath:keys/AuthKey.p8
+    tokenTtlMinutes: 20
